@@ -1,0 +1,8 @@
+#fan {
+    margin: 200px;
+    width: 450px;
+    height: 450px;
+    transition: transform 300ms;
+    background-image: url("img/canh-quat-hatari-25-inch.png");
+    background-size: 450px;
+}

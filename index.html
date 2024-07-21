@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duong Quoc Anh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Duong Quoc Anh</h1>
+    <div id="fan"></div>
+    <button type="button"  onclick="offFan()">OFF</button>
+    <button type="button"  onclick="onFan(15,1)">1</button>
+    <button type="button"  onclick="onFan(30,2)">2</button>
+    <button type="button"  onclick="onFan(50,3)">3</button>
+
+    <script type="text/javascript">
+        let speed = 0;
+        let rotation = 0;
+            setInterval(function () {
+            let fan = document.getElementById("fan")
+            fan.style.transform = `rotate(${rotation}deg`;
+            rotation += speed;
+            }, 100);
+
+        let level = 0;
+
+        function offFan() {
+            speed = 0;
+            level = 0;
+        }
+
+        function onFan(s, lv) {
+            if (level === lv) {
+                offFan();
+                return;
+            }
+            speed = s;
+            level = lv;
+        }
+
+    </script>
+</body>
+
+</html>
